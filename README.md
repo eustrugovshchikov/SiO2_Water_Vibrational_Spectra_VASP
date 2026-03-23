@@ -1,6 +1,6 @@
-# Vibrational_OH_CH3_SiO2_VASP
+# SiO2_Water_Vibrational_Spectra_VASP
 
-**Compute vibrational frequency spectra of OH and CH₃ groups on α‑SiO₂ from VASP trajectories.**
+**Computes vibrational spectra from VASP MD trajectories for OH, CH₃, and water species in silica-based and interfacial systems.**
 
 ---
 
@@ -50,12 +50,13 @@ START_FRAME=5000
 FINISH_FRAME=100000
 # ***********************************
 
-# Based on the command-line argument (1,2,3,4), the script outputs:
+# Based on the command-line argument (1,2,3,4,5), the script outputs:
 #  1) Mode 1 (only OH): Bonds: H–O and O–Si, Angle: H–O–Si.
 #  2) Mode 2 (only CH3): Bonds: C–H (for each H in CH3) and C–Si;
 #       Angles: all H–C–H combinations and H–C–Si angles.
 #  3) Mode 3 (only surface angles): Angles at the Si center between any two functional groups.
-#  4) Mode 4 (all): Both groups’ bonds/angles plus the surface angles.
+#  4) Mode 4 (all surface groups): Both groups’ bonds/angles plus the surface angles.
+#  5) Mode 5 (only water): Bonds: H–O (only once per bond) and angle: H–O–H.
 
 # Example invocation for Mode 4:
 echo "Running find_indices.py to extract H atom indices..."
